@@ -41,7 +41,7 @@ const ItemInfo = (props) => {
                 </div>
                 <h1 className=' text-lg text-main-text font-bold py-5'>{title}</h1>
                 <div className='flex justify-between items-center'>
-                    <p className=' text-sm text-sub-text font-semibold text-left'>{description}</p>
+                    <p className=' text-sm text-sub-text font-semibold text-left w-4/5 '>{description}</p>
                     <div>
                         <h2 className='  text-2xl text-main-text font-bold'>₩ {sale}</h2>
                         <p className='text-sm text-sub-text font-semibold line-through'>₩ {price}</p>
