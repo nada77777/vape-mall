@@ -1,16 +1,17 @@
+import { Outlet } from 'react-router-dom';
 import './App.css';
-import Banner from './components/banner/banner';
-import Header from './components/header/header';
-import MainPage from './pages/main_page/main_page';
-
+import { CartContextProvider } from './context/cart_contex';
+import HeaderAndBanner from './pages/header_and_banner/header_and_banner';
 
 function App() {
+
   return (
-    <div className="App">
-      <Header />
-      <Banner />
-      <MainPage />
-    </div>
+    <CartContextProvider>
+      <div className="App">
+        <HeaderAndBanner />
+        <Outlet />
+      </div>
+    </CartContextProvider>
   );
 }
 
