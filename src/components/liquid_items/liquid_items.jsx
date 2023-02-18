@@ -8,7 +8,7 @@ const LiquidItems = ({ dataType }) => {
     const itemsLength = items.length > 0;
     useEffect(() => {
         loadItems(dataType).then(result => setItems(result));
-    }, []);
+    }, [dataType]);
     return (
         <section>
             {!itemsLength &&

@@ -3,7 +3,7 @@ import CountButton from '../../UI/button/count_button/count_button';
 import { RiDeleteBinLine } from 'react-icons/ri';
 
 const CartItem = ({ item, addCartItem, deleteCartItem }) => {
-    const { image, price, sale, title, id, count } = item;
+    const { image, price, sale, title, count } = item;
 
 
     return (

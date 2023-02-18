@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 const CountButton = ({ item, count, onClickPlus, deleteCartItem }) => {
-    // const [count, setCount] = useState(1);
 
     const onClick = (event) => {
         event.preventDefault();

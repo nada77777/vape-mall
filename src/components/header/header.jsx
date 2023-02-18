@@ -1,7 +1,6 @@
 import React from 'react';
 import { BsCart } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
-import Button from '../../UI/button/button';
 import SearchBar from '../search_bar/search_bar';
 
 const Header = (props) => {

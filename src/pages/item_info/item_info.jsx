@@ -10,7 +10,7 @@ const ItemInfo = (props) => {
 
     const { addCartItem } = useCartContext();
     const item = useLocation().state.item;
-    const { title, price, sale, description, image, percent, company, count } = item;
+    const { title, price, sale, description, image, company } = item;
     const [cartItem, setCartItem] = useState(item);
 
     // item, count, onClickPlus, deleteCartItem 
