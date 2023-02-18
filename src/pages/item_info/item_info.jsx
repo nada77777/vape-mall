@@ -56,15 +56,6 @@ const ItemInfo = (props) => {
                     </div>
                 </div>
                 <div className=' mt-7'>
-                    {/* <Button>
-                        <span className=' flex items-center border rounded-lg font-bold border-sub-text p-3'>
-                            <a className=' block font-bold px-3' href=" "> - </a>1<a className=' block font-bold px-3' href=" "> + </a>
-                        </span>
-                    </Button> */}
-                    {/* <Button addCartItem={addCartItem} item={item}>
-                        <span className='flex bg-main-color py-3 px-10 text-base text-main-text font-bold'>ADD TO CART</span>
-                    </Button> */}
-
                     <CountButton count={cartItem.count} onClickPlus={plusCount} deleteCartItem={minusCount} />
                     <ButtonYellow name='ADD TO CART' onClick={addCartItem} fromInfoPage='true' item={cartItem} />
                 </div>
