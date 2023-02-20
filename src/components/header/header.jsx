@@ -7,7 +7,11 @@ const Header = (props) => {
     return (
         <header className='flex items-center justify-center py-5'>
             <SearchBar />
-            <Link to={`/cartpage`}><button className=' block bg-main-text text-white rounded-lg hover:bg-gray-900 p-2.5 m-2'><BsCart /></button></Link>
+            <Link to={`/cartpage`}>
+                <button className=' block bg-main-text text-white rounded-lg hover:bg-gray-900 p-2.5 m-2'>
+                    <BsCart />
+                </button>
+            </Link>
         </header>
     );
 };

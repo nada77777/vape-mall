@@ -9,11 +9,10 @@ import CountButton from '../../UI/button/count_button/count_button';
 const ItemInfo = (props) => {
 
     const { addCartItem } = useCartContext();
-    const item = useLocation().state.item;
+    const item = useLocation().state.item;  //useNavigate로 할당 받은 item location으로 이용
     const { title, price, sale, description, image, company } = item;
     const [cartItem, setCartItem] = useState(item);
 
-    // item, count, onClickPlus, deleteCartItem 
     const plusCount = () => {
         const updatedItem = { ...cartItem, count: cartItem.count + 1 };
         setCartItem(updatedItem);
@@ -25,7 +24,15 @@ const ItemInfo = (props) => {
         }
         const updatedItem = { ...cartItem, count: cartItem.count - 1 };
         setCartItem(updatedItem);
+    };
 
+    const MlButton = () => {    //연속되는 ML버튼 함수로 생성
+        const capacity = ['30 ML', '60 ML', '90 ML'];
+        return (
+            capacity.map((ml) =>
+                <Button><span className='flex text-sm bg-item-card p-3 transition-all hover:bg-main-text hover:text-white'>{ml}</span></Button>
+            )
+        );
     };
     return (
         <section className=' relative small:flex   p-12 bg-main-color '>
@@ -50,9 +57,7 @@ const ItemInfo = (props) => {
                 <div className=' text-left'>
                     <span className='flex text-sm text-main-text font-bold py-2'>Variety</span>
                     <div>
-                        <Button><span className='flex text-sm bg-item-card p-3 transition-all hover:bg-main-text hover:text-white'>30 ML</span></Button>
-                        <Button><span className='flex text-sm bg-item-card p-3 transition-all hover:bg-main-text hover:text-white'>60 ML</span></Button>
-                        <Button><span className='flex text-sm bg-item-card p-3 transition-all hover:bg-main-text hover:text-white'>90 ML</span></Button>
+                        <MlButton />
                     </div>
                 </div>
                 <div className=' mt-7'>

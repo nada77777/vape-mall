@@ -7,8 +7,11 @@ const LiquidItems = ({ dataType }) => {
     const [items, setItems] = useState([]);
     const itemsLength = items.length > 0;
     useEffect(() => {
-        loadItems(dataType).then(result => setItems(result));
+        loadItems(dataType).then(result => setItems(result)); //컴포넌트 마운트 시 loadItems이용해 dataType에 따라 해당 data 받아오기
     }, [dataType]);
+
+    const LiquidItems = items.map((item) => <LiquidItem key={item.id} item={item} />);
+
     return (
         <section>
             {!itemsLength &&
@@ -18,7 +21,7 @@ const LiquidItems = ({ dataType }) => {
                 </div>}
             {itemsLength &&
                 <ul className='grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5  gap-4'>
-                    {items && items.map((item) => <LiquidItem key={item.id} item={item} />)}
+                    {items && LiquidItems}
                 </ul>
             }
         </section>

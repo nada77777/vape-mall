@@ -3,8 +3,8 @@ import CountButton from '../../UI/button/count_button/count_button';
 import { RiDeleteBinLine } from 'react-icons/ri';
 
 const CartItem = ({ item, addCartItem, deleteCartItem }) => {
-    const { image, price, sale, title, count } = item;
 
+    const { image, price, sale, title, count } = item;
 
     return (
         <li className=' flex justify-evenly items-center bg-item-card rounded-lg py-5 my-3 border border-zinc-400'>

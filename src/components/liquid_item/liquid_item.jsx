@@ -2,11 +2,14 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const LiquidItem = ({ item }) => {
+
     const navigate = useNavigate();
     const goToPage = (item, itemId) => {
-        navigate(`/iteminfo`, { state: { item: item } });
+        navigate(`/iteminfo`, { state: { item: item } }); //infopage로 이동, state로 아이템 정보 전달 
     };
+
     const { image, sale, title, id } = item;
+
     return (
         <li className='flex flex-col scree rounded-lg shadow-md overflow-hidden cursor-pointer transition-all hover:scale-105 bg-item-card py-5 h-96'
             onClick={() => goToPage(item, id)}>

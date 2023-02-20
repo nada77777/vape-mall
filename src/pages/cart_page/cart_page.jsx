@@ -4,8 +4,25 @@ import { useCartContext } from '../../context/cart_contex';
 import ButtonYellow from '../../UI/button/button_yellow/button_yellow';
 
 const CartPage = (props) => {
-    const { cartItemsInfo: { items, subTotal, totalPrice }, addCartItem, deleteCartItem } = useCartContext();
+    const SHTIPPING_COST = '+ ₩ 5000';
+    const DISCOUNT = '- ₩ 3000';
+    const { cartItemsInfo: { items, subTotal, totalPrice }, addCartItem, deleteCartItem } = useCartContext(); //context에서 cartItems 정보, 추가, 삭제 객체 가져오기
     const itemsLength = items.length > 0
+
+    const PriceComponent = () => {  //연속되는 div 태그 함수로 생성
+        const priceList = [{ name: 'subTotal', price: subTotal },
+        { name: 'Shipping Cost', price: SHTIPPING_COST },
+        { name: 'Discount', price: DISCOUNT },
+        { name: 'Total', price: totalPrice }];
+
+        return (
+            priceList.map((item, index) =>
+                <div key={index} className=' flex justify-between items-center'>
+                    <span className=' text-sub-text text-text font-semibold'>{item.name}</span>
+                    <span className=' text-cart-price font-semibold'>{item.price}</span>
+                </div>)
+        );
+    };
 
     return (
         <section className=' bg-white rounded-lg small:px-28 px-10 py-5 mb-36 max-w-6xl m-auto'>
@@ -14,25 +31,9 @@ const CartPage = (props) => {
             <ul className=' px-1 mb-20 max-h-96 overflow-y-scroll '>
                 {itemsLength && items.map((item) => <CartItem key={item.id} item={item} addCartItem={addCartItem} deleteCartItem={deleteCartItem} />)}
             </ul>
-            {/* {items.map((item) => <CartItem key={item.id} item={item} />)} */}
             <div className=' max-w-2xl m-auto mb-5 cursor-default'>
                 <h1 className=' text-main-text font-semibold text-2xl text-left mb-5'>Order Info</h1>
-                <div className=' flex justify-between items-center '>
-                    <span className=' text-sub-text text-text font-semibold'>Subtotal</span>
-                    <span className=' text-cart-price font-semibold'>{subTotal}</span>
-                </div>
-                <div className=' flex justify-between items-center '>
-                    <span className=' text-sub-text font-semibold'>Shipping Cost</span>
-                    <span className=' text-cart-price font-semibold'>+ ₩ 5000</span>
-                </div>
-                <div className=' flex justify-between items-center '>
-                    <span className=' text-sub-text font-semibold'>Discount</span>
-                    <span className=' text-cart-price font-semibold'>- ₩ 3000</span>
-                </div>
-                <div className=' flex justify-between items-center '>
-                    <span className=' text-sub-text font-semibold'>Total</span>
-                    <span className=' text-cart-price font-semibold'>{totalPrice}</span>
-                </div>
+                <PriceComponent />
             </div>
             <ButtonYellow name='CHECKOUT' />
         </section>
