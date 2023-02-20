@@ -1,6 +1,6 @@
-##### URL https://magical-stardust-960845.netlify.app
+### URL https://magical-stardust-960845.netlify.app
 
-# 전자담배 액상 구매 사이트
+##### 전자담배 액상 구매 사이트
 
 ## 목표
 * react react-router context reducer tailwindcss firebase 사용
