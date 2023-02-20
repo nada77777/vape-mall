@@ -25,12 +25,3 @@ module.exports = {
   },
   plugins: [],
 }
-
-
-/* banner color #F3B413 */
-/* button #2b3639
-itemcard #f3f5f7 
-maintext #72787C
-subtext #A5AFB3
-search #C3CCCF */
-/* //F9C802 */
