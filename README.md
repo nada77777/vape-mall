@@ -1,5 +1,4 @@
-### 링크 
-##### https://magical-stardust-960845.netlify.app
+### 링크 ##### https://magical-stardust-960845.netlify.app
 
 # 전자담배 액상 구매 사이트
 
