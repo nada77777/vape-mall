@@ -9,9 +9,25 @@
 * tailwindcss 손에 익게 하기
 * firebase의 database 사용해 mainpage에 아이템 출력, 검색 키워드와 일치하는 아이템 출력
 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
-* 전체 화면
-<img width="100%" src="vapeMallMain.png"/>
-<img width="100%" src="vapeMallInfo.png"/>
-<img width="100%" src="vapeMallCart.png"/>
+### 전체 페이지
+<img width="100%" src="vapeMallMain.png"/><br/><br/><br/>
+
+### 상세 페이지
+<img width="100%" src="vapeMallInfo.png"/><br/><br/><br/>
+
+### 카트 페이지
+<img width="100%" src="vapeMallCart.png"/><br/><br/><br/>
+
+### 카트 페이지
+<img width="100%" src="cart.gif"/><br/><br/><br/>
+
+### 카트 페이지
+<img width="100%" src="search,gif"/><br/><br/><br/>
 
