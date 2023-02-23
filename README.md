@@ -12,6 +12,6 @@
 
 * 전체 화면
 <img width="100%" src="vapeMallMain.png"/>
-<img width="100%" src="vapMallInfo.png"/>
+<img width="100%" src="vapeMallInfo.png"/>
 <img width="100%" src="vapeMallCart.png"/>
 
