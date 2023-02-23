@@ -29,5 +29,5 @@
 <img width="100%" src="cart.gif"/><br/><br/><br/>
 
 ### 카트 페이지
-<img width="100%" src="search,gif"/><br/><br/><br/> 
+<img width="100%" src="search.gif"/><br/><br/><br/> 
 
