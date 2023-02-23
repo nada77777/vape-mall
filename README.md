@@ -8,3 +8,9 @@
 * context, reducer 사용해 카트에 아이템 적재 / 수량 추가 감소
 * tailwindcss 손에 익게 하기
 * firebase의 database 사용해 mainpage에 아이템 출력, 검색 키워드와 일치하는 아이템 출력
+
+
+* 전체 화면
+<img width="100%" src="vapeMallMain.png"/>
+<img width="100%" src="vapeMallInfo.png"/>
+
